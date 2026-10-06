@@ -1,22 +1,378 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>記事プレビュー</title><style>body{margin:0;background:#ddd}main{max-width:750px;margin:0 auto}img{display:block;width:100%}</style></head><body><main>
-<img src="C_01.jpg">
-<img src="C_02.jpg">
-<img src="C_03.jpg">
-<img src="C_04.jpg">
-<img src="C_05.jpg">
-<img src="C_06.jpg">
-<img src="C_07.jpg">
-<img src="C_08.jpg">
-<img src="C_09.jpg">
-<img src="C_10.jpg">
-<img src="C_11.jpg">
-<img src="C_12.jpg">
-<img src="C_13.jpg">
-<img src="C_14.jpg">
-<img src="C_15.jpg">
-<img src="C_16.jpg">
-<img src="C_17.jpg">
-<img src="C_18.jpg">
-<img src="C_19.jpg">
-<img src="C_20.jpg">
-</main></body></html>
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=750">
+<meta name="robots" content="noindex,nofollow">
+<title>糖貫プロネス 記事B v3</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:750px;margin:0 auto;background:#fff;color:#333;
+ font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;font-weight:300;
+ font-size:30px;line-height:1.9;letter-spacing:.03em}
+.p{padding:44px 40px;background:#fff;text-align:center}
+.p.img{padding:0}
+img{display:block;max-width:100%;margin:0 auto}
+b{font-weight:700}
+.mk{background:linear-gradient(transparent 60%,#fff27a 60%);font-weight:700}
+.bl{color:#2a6fc9;font-weight:600}
+.pk{color:#e0508a;font-weight:700}
+.rd{color:#d8303a;font-weight:800}
+.gap{height:34px}
+.sm{font-size:20px;color:#999;line-height:1.6;letter-spacing:.01em}
+.note{font-size:20px;color:#888;line-height:1.6;letter-spacing:.01em;margin-top:12px}
+.lft{text-align:left}
+.pr{font-size:21px;color:#888;text-align:left;padding:14px 40px;border-bottom:1px solid #eee}
+/* FV */
+.fv{padding:40px 36px 30px;text-align:left}
+.fv .top{font-size:30px;color:#8a3fb4;font-weight:700;text-align:center;letter-spacing:.02em}
+.fv .top span{font-size:40px}
+.fv .row{display:flex;align-items:center;gap:10px;margin-top:18px}
+.fv .row .t{flex:1;font-size:40px;font-weight:800;line-height:1.55}
+.fv .row img{width:300px;height:300px;border-radius:50%;object-fit:cover;flex:none}
+.fv .hook{color:#e07a1f;font-size:32px;font-weight:700}
+.fv .big{font-size:58px;color:#d8303a;font-weight:900;text-align:center;margin-top:24px;line-height:1.35}
+.fv .tag{display:block;width:fit-content;margin:22px auto 0;background:#fff7b0;border:3px solid #333;padding:8px 26px;font-size:28px;font-weight:700}
+/* byline */
+.by{display:flex;gap:18px;align-items:center;text-align:left;padding:0 0 20px}
+.by img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.by b{font-size:26px}.by span{display:block;font-size:20px;color:#aaa}
+/* heading */
+.h{text-align:left;border-left:10px solid #e0508a;padding:8px 0 8px 22px;font-size:38px;font-weight:800;line-height:1.5;margin:0 0 10px;border-bottom:1px solid #f3c6d8}
+.cc{font-size:40px;font-weight:800;line-height:1.5}
+/* point box */
+.pt{border:3px solid #9fd8a8;background:#f3fbf4;border-radius:14px;padding:26px 28px;text-align:left;margin-top:10px}
+.pt .lb{color:#3aa655;font-weight:800;font-size:28px;margin-bottom:8px}
+.pt li{list-style:none;position:relative;padding:10px 0 10px 52px;font-weight:700;font-size:28px;line-height:1.6}
+.pt li:before{content:"✓";position:absolute;left:0;top:12px;width:38px;height:38px;border-radius:50%;background:#3aa655;color:#fff;font-size:24px;line-height:38px;text-align:center}
+.pt li small{display:block;font-weight:400;font-size:25px;color:#555}
+.arw{width:0;height:0;margin:20px auto;border-left:70px solid transparent;border-right:70px solid transparent;border-top:56px solid #e892b6}
+.frame{border:4px solid #f3c6d8;border-radius:14px;padding:14px;margin-top:10px}
+.ph{border-radius:12px}
+/* bar chart (text/CSS) */
+.ch{border:2px solid #eee;border-radius:14px;padding:22px 24px 18px;margin-top:14px;text-align:left;background:#fff}
+.ch .tt{font-size:26px;font-weight:700;color:#333;text-align:center;line-height:1.5}
+.ch .ax{font-size:19px;color:#888;margin-top:6px}
+.ch .bars{display:flex;align-items:flex-end;justify-content:center;gap:70px;height:260px;margin-top:10px;border-bottom:2px solid #ccc;padding:0 20px}
+.ch .bar{width:150px;text-align:center;font-size:22px;font-weight:700;color:#555}
+.ch .bar i{display:block;background:#bbb;border-radius:6px 6px 0 0}
+.ch .bar.on i{background:#3aa655}
+.ch .bar.on.or i{background:#f08a24}
+.ch .bar.on{color:#2a8a44}.ch .bar.on.or{color:#d8701a}
+.ch .lbl{display:flex;justify-content:center;gap:70px;padding:8px 20px 0}
+.ch .lbl span{width:150px;text-align:center;font-size:23px;font-weight:700;color:#555;line-height:1.4}
+.ch .lbl span.on{color:#2a8a44}.ch .lbl span.on.or{color:#d8701a}
+.ch .src{font-size:18px;color:#999;line-height:1.5;margin-top:14px}
+/* review */
+.rv{border:2px solid #eee;border-radius:14px;padding:26px 28px;text-align:left;margin-top:22px;box-shadow:0 3px 0 #f4f4f4}
+.rv .hd{display:flex;align-items:center;gap:16px}
+.rv .av{width:72px;height:72px;border-radius:50%;background:#f6d7e3;color:#e0508a;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:28px;flex:none;overflow:hidden}
+.rv .av img{width:72px;height:72px;object-fit:cover}
+.rv .tt{color:#e0508a;font-weight:800;font-size:30px;line-height:1.4}
+.rv .who{font-size:22px;color:#999}
+.rv p{font-size:26px;line-height:1.75;margin-top:12px}
+.rv p.kj{font-size:18px;color:#aaa;margin-top:8px}
+/* price (text) */
+.yen{font-size:96px;color:#d8303a;font-weight:900;line-height:1.1}
+.yen small{font-size:40px}
+.strike{text-decoration:line-through;color:#888}
+/* CTA v3 */
+.cta{margin-top:26px}
+.cta .ob{font-size:28px;font-weight:700;color:#333}
+.cta .bt{display:block;width:640px;margin:10px auto 0;background:#e0508a;color:#fff;border-radius:14px;font-weight:800;font-size:40px;padding:28px 90px 28px 40px;letter-spacing:.05em;border:4px solid #fff;outline:3px solid #e0508a;position:relative;line-height:1.2}
+.cta .bt small{display:block;font-size:22px;font-weight:600;margin-top:6px;letter-spacing:.02em}
+.cta .bt:after{content:"→";position:absolute;right:28px;top:50%;margin-top:-22px;width:44px;height:44px;line-height:44px;border-radius:50%;background:#fff;color:#e0508a;font-size:26px;text-align:center}
+</style></head>
+<body>
+
+<!-- 01 PR -->
+<div class="pr">PR｜本記事は広告です（みなわ発酵「糖貫プロネスpremium」）</div>
+
+<!-- 02 FV -->
+<section class="p fv">
+  <p class="top">“<span>食べることが好き</span>”な人ほど知らない事実</p>
+  <div class="row">
+    <div class="t">健診の「血糖値」<br><span class="mk">我慢だけで</span><br>どうにかしようと<br>していませんか？<br><span class="hook">「順番が逆だった…」</span></div>
+    <img src="img/face2.jpg" alt="">
+  </div>
+  <p class="big">我慢の前に知りたかった<br>“2つの血糖値”の話</p>
+  <span class="tag">※これは、40代後半の主婦の体験談です。</span>
+  <p class="sm" style="text-align:center;margin-top:8px">※個人の感想です。画像はイメージです。</p>
+</section>
+
+<!-- 03 こんな方に -->
+<section class="p">
+  <div class="pt">
+    <p class="lb">こんな方に読んでほしい</p>
+    <ul>
+      <li>健康診断で血糖値を指摘された</li>
+      <li>ご飯・麺・甘いもの、食べることが好き</li>
+      <li>食事制限や運動が、なかなか続かない</li>
+      <li>「まだ自分には早い」と思っていた</li>
+    </ul>
+  </div>
+  <div class="gap"></div>
+  <p>ひとつでも当てはまったら、</p>
+  <p><span class="mk">我が家の話が参考になるかも</span>しれません。</p>
+</section>
+
+<!-- 04 byline + story -->
+<section class="p">
+  <div class="by"><img src="img/face2.jpg" alt=""><div><b>ゆき（47歳・パート勤務）</b><span>2026.10.06 更新　暮らし・健康</span></div></div>
+  <p>去年の秋、夫婦そろって受けた健康診断。</p>
+  <p>夫は会社の健診、私はパート先の健診。</p>
+  <p>届いた結果票を2人で開いて、</p>
+  <p class="bl">しばらく動けませんでした。</p>
+  <div class="gap"></div>
+  <p>それは・・・</p>
+  <p><span class="mk">たった1文字</span>でした。</p>
+</section>
+<section class="p img"><img src="img/couple2.jpg" alt=""></section>
+<section class="p">
+  <p>空腹時血糖の欄に、</p>
+  <p class="cc">そろって<span class="rd">「H」</span>。</p>
+  <div class="gap"></div>
+  <p>私は47歳、夫は50歳。</p>
+  <p>血糖値なんて、</p>
+  <p><span class="mk">まだ先の話</span>だと思っていました。</p>
+  <div class="gap"></div>
+  <p>自覚なんて何もなかったのに、</p>
+  <p>お医者さんからは</p>
+  <p><b>「食事と運動に気をつけて</b></p>
+  <p><b>様子を見ましょう」</b>と。</p>
+  <div class="gap"></div>
+  <p>ラーメンと白いご飯が大好きな夫と、</p>
+  <p>子どものお弁当の残りと3時のおやつが</p>
+  <p>楽しみな私。</p>
+  <p class="pk">さて、どうしよう・・・</p>
+</section>
+
+<!-- 05 struggle -->
+<section class="p">
+  <p class="h">まずは好物を“ゼロ”に。でも…</p>
+  <div class="gap"></div>
+  <p>次の日から、夫は夜のご飯抜き、</p>
+  <p>私はおやつを封印。</p>
+  <p>最初の1週間は、なんとかなりました。</p>
+  <div class="gap"></div>
+  <p>でも2週目の週末、</p>
+  <p><span class="mk">どら焼きを2つ</span>ぺろり・・・💦</p>
+  <div class="gap"></div>
+  <p>我慢したぶんを</p>
+  <p>取り返すみたいに食べてしまって、</p>
+  <p>そのあとは自己嫌悪。</p>
+  <p>夫は夫で、残業帰りに空腹でイライラ・・・</p>
+  <div class="gap"></div>
+  <p>夫と始めた夜の散歩も、</p>
+  <p>帰りが遅い日と雨の日が続いて</p>
+  <p>自然消滅。</p>
+  <div class="gap"></div>
+  <p class="bl">「ゼロか百か」で考えるほど、</p>
+  <p class="bl">続かなくなるんですよね。</p>
+</section>
+
+<!-- 06 point -->
+<section class="p">
+  <p>そんなとき、</p>
+  <p>健康番組が好きな職場の先輩が</p>
+  <p>教えてくれたのが、この話。</p>
+  <div class="gap"></div>
+  <p class="cc">＼血糖値は“1つ”じゃない!?／</p>
+  <div class="arw"></div>
+  <div class="pt">
+    <p class="lb">ポイント</p>
+    <ul>
+      <li>血糖値には「空腹時」と「食後」の2つの見方がある</li>
+      <li>健康診断でよく見るのは「空腹時」の数値</li>
+      <li>「食後」の上がり方は、毎日の食事のたびに関わる</li>
+    </ul>
+  </div>
+  <div class="gap"></div>
+  <p>えっ、</p>
+  <p class="bl">健診の数字ばかり気にして、</p>
+  <p class="bl">毎日の「食後」のことは</p>
+  <p class="bl">考えたこともなかった・・・！</p>
+  <div class="gap"></div>
+  <p>だったら、</p>
+  <p><span class="mk">どちらも意識できる方法</span>がいいな。</p>
+  <p>そう思って調べてみると・・・</p>
+</section>
+
+<!-- 07 product -->
+<section class="p">
+  <p class="h">我が家で続いている、<br>毎日の“糖ケア習慣”とは？</p>
+  <div class="gap"></div>
+  <p>見つけたのが、</p>
+  <p class="cc">機能性表示食品</p>
+  <p class="cc pk">「糖貫プロネスpremium」✨</p>
+  <div class="frame"><img src="img/pouch_plate.jpg" alt=""></div>
+  <div class="gap"></div>
+  <p>私が気になっていた</p>
+  <p>「空腹時」と「食後」、</p>
+  <p>それぞれの血糖値に向けた成分が</p>
+  <p><span class="mk">1粒に2つ入っている</span>んです。</p>
+  <div class="gap"></div>
+  <p>届出表示を見ると、こんなふうに。</p>
+  <div class="pt">
+    <p class="lb">2つの機能性関与成分</p>
+    <ul>
+      <li>バナバ葉由来コロソリン酸<small>空腹時血糖値が高めの方の空腹時血糖値を下げる機能が報告されています。</small></li>
+      <li>サラシア由来サラシノール<small>食事から摂取した糖の吸収を抑え、食後血糖値の上昇をゆるやかにする機能が報告されています。</small></li>
+    </ul>
+  </div>
+  <p class="note">※届出番号：H821。本品は疾病の診断、治療、予防を目的としたものではありません。</p>
+</section>
+
+<!-- 08 graphs -->
+<section class="p">
+  <p>調べていくと、</p>
+  <p>研究のグラフも公開されていました。</p>
+  <div class="ch">
+    <p class="tt">バナバ葉由来コロソリン酸<br><span style="font-size:22px;color:#777">12週間後の空腹時血糖値の変化率（%）</span></p>
+    <div class="bars">
+      <div class="bar">102<i style="height:204px"></i></div>
+      <div class="bar on">92<i style="height:184px"></i></div>
+    </div>
+    <div class="lbl"><span>プラセボ</span><span class="on">バナバ葉<br>エキス</span></div>
+    <p class="src">*p＜0.05、群間有意差。空腹時血糖値が高め（100–125mg/dL）の健常者30名を、バナバ葉由来コロソリン酸0.9mgを含むカプセルを摂取する群と含まないカプセルを摂取する群に分け、12週間摂取した試験。出典：Choi MS, et al. Food Funct. 2014;5(7):1621-30.（研究レビューの採用文献）</p>
+  </div>
+  <div class="ch">
+    <p class="tt">サラシア由来サラシノール<br><span style="font-size:22px;color:#777">食後の血糖曲線下面積（mg·hr/dl）</span></p>
+    <div class="bars">
+      <div class="bar">83<i style="height:208px"></i></div>
+      <div class="bar on or">74<i style="height:185px"></i></div>
+    </div>
+    <div class="lbl"><span>非摂取群</span><span class="on or">摂取群</span></div>
+    <p class="src">*p＜0.05。空腹時血糖値が70mg/dl以上126mg/dl未満の健康成人男女48名を、サラシア由来サラシノール0.03mgを含む飲料を摂取する群と含まない飲料を摂取する群に分け、負荷食（米飯・ふりかけ）摂取後の血糖値の経時変化を測定した試験。血糖曲線下面積（AUC）が低いことは、一般に糖質の吸収が抑えられたことを表します。出典：北林広巳ら. 健康・栄養食品研究. 2007;10(2):23-36.（研究レビューの採用文献のうち代表的な1例）</p>
+  </div>
+  <div class="gap"></div>
+  <p>数字で見せてくれるのは、</p>
+  <p class="bl">「これなら」と思えたポイントでした。</p>
+  <div class="gap"></div>
+  <p>しかも、</p>
+  <p><b>GMPに準拠した国内工場</b>で作られていて、</p>
+  <p>保存料・合成着色料・合成香料は</p>
+  <p><span class="mk">不使用</span>。</p>
+  <div class="gap"></div>
+  <p>お医者さんへのアンケートでも、</p>
+  <p class="pk">94.11%が「推奨できる」※</p>
+  <p>と答えているそうで、</p>
+  <p>ちょっと心強かったです。</p>
+  <p class="note lft">※インターネットによるアンケート回答方式で内科医34名を対象に「糖貫プロネスpremium（機能性表示食品）の商品規格に関するアンケート」を実施。「糖貫プロネスを推奨できますか」という質問に「おすすめ／とてもおすすめ／ややおすすめ」と回答した割合94.11%（34名中32名）。調査期間：2025年11月26日〜12月2日、運営調査機関：医療統計研究所。本調査は個人のブランドに対するイメージを元にアンケートを実施・集計したもので（本ブランドの利用有無は聴取無し）、効果効能や優位性を保証するものではありません。</p>
+</section>
+
+<!-- 09 use -->
+<section class="p">
+  <p class="h">実際に続けてみて</p>
+  <div class="gap"></div>
+  <img src="img/water2.jpg" alt="" class="ph">
+  <div class="gap"></div>
+  <p>粒が小さいので、</p>
+  <p><span class="mk">錠剤が苦手な私でもするっと</span>飲めます。</p>
+  <p>においも気になりません。</p>
+  <div class="gap"></div>
+  <p>食品なので、飲む時間は自由。</p>
+  <p>私は<b>お昼ごはんとおやつの前</b>、</p>
+  <p>夫は<b>晩ごはんの前</b>が</p>
+  <p>それぞれの習慣になりました。</p>
+  <div class="gap"></div>
+  <p>好物もやめていません。</p>
+  <p>ご飯は少し控えめに、</p>
+  <p>どら焼きは夫と半分こ。</p>
+  <p>散歩はお休みの日に2人で。</p>
+  <div class="gap"></div>
+  <p class="bl">我慢だけの毎日より、</p>
+  <p class="bl">ずっと気持ちがラクになりました♪</p>
+  <div class="gap"></div>
+  <img src="img/husband2.jpg" alt="" class="ph">
+  <div class="gap"></div>
+  <p>夫も「粒が小さくて飲みやすい」と、</p>
+  <p><span class="mk">毎晩の自分の習慣</span>にしています。</p>
+</section>
+
+<!-- 10 reviews -->
+<section class="p">
+  <p>実はこの糖貫プロネス、</p>
+  <p>シリーズ累計で</p>
+  <p class="cc"><span class="pk">100万袋</span>を突破しているそう！</p>
+  <p class="sm">※販売開始〜2026年5月11日のみなわ発酵全商品の出荷総数</p>
+  <div class="gap"></div>
+  <p><span class="mk">使っている方の声も</span></p>
+  <p><span class="mk">たくさん見つかりました！</span></p>
+  <div class="rv">
+    <div class="hd"><span class="av"><img src="img/face.jpg" alt=""></span><div><p class="tt">「夫婦で食事の前に」</p><p class="who">ひろみさん／主婦</p></div></div>
+    <p>健診で夫婦そろって血糖値を指摘されてから、食事の前に飲むのが習慣になりました。粒が小さくて飲みやすいので、錠剤が苦手な私でも続けられています。</p>
+    <p class="kj">※個人の感想です。</p>
+  </div>
+  <div class="rv">
+    <div class="hd"><span class="av">N</span><div><p class="tt">「1日2粒（目安）で助かります」</p><p class="who">野口さん／58歳</p></div></div>
+    <p>血糖値対策として食事や運動だけでなく、サプリでも対策したいと思い飲み始めました。丸い錠剤で飲みやすく、1日2粒（目安）なので助かります。</p>
+    <p class="kj">※個人の感想です。</p>
+  </div>
+  <div class="rv">
+    <div class="hd"><span class="av">T</span><div><p class="tt">「“飲むお守り”として」</p><p class="who">田中さん／52歳</p></div></div>
+    <p>血糖値の数値が気になり飲むようにしました。機能性関与成分のバナバとサラシアがどちらも入っているのが嬉しいです。「飲むお守り」として続けたいです。</p>
+    <p class="kj">※個人の感想です。</p>
+  </div>
+  <div class="rv">
+    <div class="hd"><span class="av">I</span><div><p class="tt">「小粒で飲みやすいです」</p><p class="who">一之瀬さん／45歳</p></div></div>
+    <p>忘れずに飲むように心がけています。嫌な味や香りがしない小粒で飲みやすいです。</p>
+    <p class="kj">※個人の感想です。</p>
+  </div>
+  <p class="note">※野口さん・田中さん・一之瀬さんの声は公式サイト掲載のお客様の声より抜粋。</p>
+</section>
+
+<!-- 11 price (text) -->
+<section class="p">
+  <p class="h">気になるお値段は？</p>
+  <div class="gap"></div>
+  <p>正直、私が一番気になったのはここ。</p>
+  <p>公式サイトの定期コースなら、</p>
+  <div class="gap"></div>
+  <p>初回1袋（約15日分）が</p>
+  <p><span class="strike">通常2,990円</span>のところ…</p>
+  <p class="yen">500<small>円</small></p>
+  <p><b>（税込・送料無料）</b></p>
+  <div class="gap"></div>
+  <p>これなら、</p>
+  <p><span class="mk">1日あたり約33円</span>。</p>
+  <p>コンビニのおやつより安いので、</p>
+  <p class="bl">「まずはこれで始めてみよう」</p>
+  <p class="bl">と思えました。</p>
+  <div class="gap"></div>
+  <p>2回目以降は</p>
+  <p><b>2ヶ月ごとに2袋（1袋約30日分）</b>、</p>
+  <p><b>総額8,160円（税込）</b>のお届け。</p>
+  <p>1袋あたり4,080円で、</p>
+  <p><span class="mk">1日あたり約136円</span>です。</p>
+  <div class="gap"></div>
+  <p>定期といっても</p>
+  <p><b>お約束回数はなし</b>。</p>
+  <p>変更やお休みは、</p>
+  <p>次回発送の7日前までに</p>
+  <p>電話1本でOKとのこと。</p>
+  <p class="note lft">※初回1袋（約15日分）、2回目以降2ヶ月ごとに2袋（1袋約30日分）をお届けする定期コースです。2回目以降は1袋あたり通常価格より約32%OFFの4,080円（税込）、総額8,160円（税込）。※解約のご連絡があるまでは継続してお届けします。※変更・キャンセルは次回発送の7日前までにお電話ください。※初回価格は公式サイトのクーポン適用時の価格です。※1日あたりは初回500円÷15日、2回目以降8,160円÷60日で算出（1日2粒目安）。</p>
+</section>
+<section class="p img"><img src="img/lp_guarantee.jpg" alt=""></section>
+<section class="p">
+  <p>もし体に合わなくても、</p>
+  <p>初回分は代金が返ってくるので、</p>
+  <p><span class="mk">始めるハードルが低かった</span>です。</p>
+  <p class="note">※永久返金保証は初回お届け分（1袋）のみが対象です。条件は公式サイトをご確認ください。</p>
+  <div class="gap"></div>
+  <p>ただ、Amazonでは</p>
+  <p class="pk">過去に2度完売</p>
+  <p>したこともあるそうなので、</p>
+  <p>気になる方は早めのチェックがおすすめです。</p>
+  <p class="sm">※2024年9月25日／2024年10月11日時点にて完売（2024年10月17日時点・自社調べ）</p>
+  <div class="gap"></div>
+  <img src="img/two.jpg" alt="" class="ph">
+  <div class="gap"></div>
+  <p><b>我慢だけに頼らない、</b></p>
+  <p><b>毎日の糖ケア習慣を。</b></p>
+  <div class="cta">
+    <p class="ob">＼ 初回500円（税込）・送料無料 ／</p>
+    <div class="bt">公式サイトで詳しく見る<small>定期コース・お約束回数なし</small></div>
+  </div>
+  <p class="note">※2回目以降は2ヶ月ごとに2袋 総額8,160円（税込）でお届けします。</p>
+</section>
+
+</body></html>
